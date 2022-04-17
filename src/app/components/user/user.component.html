@@ -31,11 +31,11 @@
             const <span>{{userDetails.login}}</span> <span class="equal"> &#61; </span>
             <span>&#123;</span>
           </p>
-          <p class="ttl">Name: <span class="info">{{userDetails.name}}</span></p>
-          <p class="ttl">
+          <p class="ttl" *ngIf="userDetails.name">Name: <span class="info">{{userDetails.name}}</span></p>
+          <p class="ttl" *ngIf="userDetails.bio">
             Bio: <span class="info">{{userDetails.bio}}</span>
           </p>
-          <p class="ttl">
+          <p class="ttl" *ngIf="userDetails.location">
             Location: <span class="info">{{userDetails.location}}</span>
           </p>
           <p class="ttl">Followers: <span class="num">{{userDetails.followers}}</span></p>
