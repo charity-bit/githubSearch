@@ -22,6 +22,7 @@ export class GithubService {
     return this.http.get<User>(`${environment.base_url}/${this.username}?api_key=${environment.access_token}&limit=15`)
 
   }
+  
 
   getRepos():Observable<Repo[]>{
   

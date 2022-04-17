@@ -6,42 +6,38 @@ import { User } from '../../User';
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  styleUrls: ['./user.component.css'],
 })
 export class UserComponent implements OnInit {
-  username:string = 'charity-bit'
-  userDetails!:User;
+  username!: string;
+  userDetails!: User;
 
+  repos!: Repo[];
 
-  
-  repos!:Repo[];
-    
-  constructor(private _githubService:GithubService ) { 
-    this._githubService.username = 'charity-bit' ;
+  constructor(private _githubService: GithubService) {}
 
-    
-  }
- 
   ngOnInit(): void {
-    this._githubService.username = 'charity-bit' ;
+    this._githubService.username = 'charity-bit';
+    this._githubService.getUser().subscribe((res: any) => {
+      this.userDetails = res;
+      console.log(this.userDetails);
+    });
   }
 
-  getUserDetails(){
-    
-      this._githubService.username =  this.username ;
-      this._githubService.getUser().subscribe((res:any)=>{
-        this.userDetails= res;
-        console.log(this.userDetails)
-  
-      });
+  getUserDetails() {
+    this._githubService.username = this.username;
+    this._githubService.getUser().subscribe((res: any) => {
+      this.userDetails = res;
+      console.log(this.userDetails);
+    });
+
+    this.getRepos();
   }
 
-  getRepos(){
-    this._githubService.username =  this.username;
-    this._githubService.getRepos().subscribe((res)=>{
-       this.repos = res;
-    })
+  getRepos() {
+    this._githubService.username = this.username;
+    this._githubService.getRepos().subscribe((res) => {
+      this.repos = res;
+    });
   }
-
- 
 }

@@ -56,8 +56,9 @@
 <div class="repos">
 
     <h1>Repos</h1>
-    <div class="repos-cont">
-      
+    <div class="repos-cont" *ngFor="let repo of repos">
+      <p>{{repo.name}}</p>
+         
     </div>
 </div>
 
