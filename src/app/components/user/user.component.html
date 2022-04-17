@@ -2,5 +2,9 @@
     <input type="text" [(ngModel)] = "username">
     
     <button (click)="getUserDetails()">Search</button>
-    <button (click)="getRepos()"></button>
+    <button (click)="getRepos()">getRepos</button>
+     <div *ngFor="let repo of repos">
+         <p>{{repo.name}}</p>
+
+     </div>
 </div>

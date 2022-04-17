@@ -2,11 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import {User} from '../User';
+import {Repo}  from '../Repo'
 
 @Injectable({
   providedIn: 'root'
 })
 export class GithubService {
+
 
 
   username!:string
@@ -19,9 +22,9 @@ export class GithubService {
 
   }
 
-  getRepos():Observable<any>{
+  getRepos():Observable<Repo[]>{
 
-    return this.http.get(`${environment.base_url}/${this.username}/repos?api_key=${environment.access_token}&limit=15`)
+    return this.http.get<Repo[]>(`${environment.base_url}/${this.username}/repos?api_key=${environment.access_token}&limit=15`)
 
   }
 
