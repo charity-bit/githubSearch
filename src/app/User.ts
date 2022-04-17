@@ -5,7 +5,7 @@ export interface User {
     following: number;
     bio:string;
     avatar_url:string;
-    url:string;
+    html_url:string;
     public_repos:string;
     location:string;
 }

@@ -25,7 +25,7 @@
 
   <div class="results">
     <div class="details">
-      <a>
+      <a [href]= "userDetails.html_url">
         <code class="code">
           <p class="const">
             const <span>{{userDetails.login}}</span> <span class="equal"> &#61; </span>
@@ -35,8 +35,12 @@
           <p class="ttl">
             Bio: <span class="info">{{userDetails.bio}}</span>
           </p>
+          <p class="ttl">
+            Location: <span class="info">{{userDetails.location}}</span>
+          </p>
           <p class="ttl">Followers: <span class="num">{{userDetails.followers}}</span></p>
           <p class="ttl">Following: <span class="num">{{userDetails.following}}</span></p>
+          <p class="ttl">Repositories: <span class="num">{{userDetails.public_repos}}</span></p>
 
           <p class="closing">&#125;</p>
         </code>
@@ -48,3 +52,5 @@
     </div>
   </div>
 </div>
+
+<!-- repos -->

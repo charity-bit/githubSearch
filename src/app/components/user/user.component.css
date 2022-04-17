@@ -4,7 +4,11 @@
   margin: 40px auto;
   border: 1px solid #2f4f4f;
   border-radius: 5px;
-  padding: 4% 3%;
+  padding-bottom: 2%;
+  padding-top: 4%;
+  padding-right: 3%;
+  padding-left: 3%;
+
 }
 .title h1 {
   font-family: "Montserrat", sans-serif;
@@ -45,18 +49,21 @@
   background-color: #161b22;
   color: #fff;
   margin: 50px 0;
-  width: 80%;
+  width: 90%;
   border-radius: 4px;
  
   font-weight: 500;
   display: flex;
 }
 .details{
-  width: 70%;
+  width: 60%;
   padding: 5%;
 }
+.details a{
+  text-decoration: none;
+}
 .img-cont{
-  width:30%;
+  width:40%;
   padding: 0;
  
 }
