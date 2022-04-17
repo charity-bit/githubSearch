@@ -1,10 +1,50 @@
-<div>
-    <input type="text" [(ngModel)] = "username">
-    
+<!-- <div>
+    <input type="search" [(ngModel)] = "username">
     <button (click)="getUserDetails()">Search</button>
     <button (click)="getRepos()">getRepos</button>
-     <div *ngFor="let repo of repos">
-         <p>{{repo.name}}</p>
+            
+              
+               
+</div> -->
 
-     </div>
+<div class="main">
+  <div class="title">
+    <h1>Search For Github Users</h1>
+    <div class="hr"></div>
+  </div>
+  <div class="search">
+    <input
+      type="search" 
+      placeholder="Search for a user"
+      [(ngModel)]="username"
+    />
+    <button (click)="getUserDetails()">Search</button>
+  </div>
+
+  <!-- results template -->
+
+  <div class="results">
+    <div class="details">
+      <a>
+        <code class="code">
+          <p class="const">
+            const <span>{{userDetails.login}}</span> <span class="equal"> &#61; </span>
+            <span>&#123;</span>
+          </p>
+          <p class="ttl">Name: <span class="info">{{userDetails.name}}</span></p>
+          <p class="ttl">
+            Bio: <span class="info">{{userDetails.bio}}</span>
+          </p>
+          <p class="ttl">Followers: <span class="num">{{userDetails.followers}}</span></p>
+          <p class="ttl">Following: <span class="num">{{userDetails.following}}</span></p>
+
+          <p class="closing">&#125;</p>
+        </code>
+      </a>
+    </div>
+    <div class="img-cont">
+      <img [src]="userDetails.avatar_url" alt="">
+
+    </div>
+  </div>
 </div>

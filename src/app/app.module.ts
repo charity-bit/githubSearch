@@ -8,12 +8,16 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { UserComponent } from './components/user/user.component';
 import { ReposComponent } from './components/repos/repos.component';
+import { NoUserComponent } from './components/no-user/no-user.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    ReposComponent
+    ReposComponent,
+    NoUserComponent,
+ 
   ],
   imports: [
     BrowserModule,

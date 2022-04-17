@@ -1,8 +1,11 @@
 export interface User {
+    login:string;
     name:string;
     followers: number;
     following: number;
     bio:string;
     avatar_url:string;
     url:string;
+    public_repos:string;
+    location:string;
 }

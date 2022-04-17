@@ -13,20 +13,28 @@ export class GithubService {
 
 
   username!:string
-  repos!:[];
-  constructor(private http:HttpClient) { }
+  repos!:Observable<Repo[]>;
+  constructor(private http:HttpClient) { 
+  }
 
-  getUser(): Observable<any>{
+  getUser(): Observable<User>{
      
-    return this.http.get(`${environment.base_url}/${this.username}?api_key=${environment.access_token}&limit=15`)
+    return this.http.get<User>(`${environment.base_url}/${this.username}?api_key=${environment.access_token}&limit=15`)
 
   }
 
   getRepos():Observable<Repo[]>{
+  
 
-    return this.http.get<Repo[]>(`${environment.base_url}/${this.username}/repos?api_key=${environment.access_token}&limit=15`)
+    return this.http.get<Repo[]>(`${environment.base_url}/${this.username}/repos?api_key=${environment.access_token}&limit=5`)
 
   }
+
+  getAllRepos():Observable<Repo[]>{
+    return this.http.get<Repo[]>(`${environment.base_url}/${this.username}/repos?api_key=${environment.access_token}&limit=100`)
+
+  }
+
 
   
 }
