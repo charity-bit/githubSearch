@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   base_url: "https://api.github.com/users",
-  access_token:"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"
+  base_repo_url:"https://api.github.com/search/repositories?q=",
+  access_token:"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"
 };
 
 /*

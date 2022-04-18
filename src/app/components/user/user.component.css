@@ -47,6 +47,7 @@
   display: flex;
   gap: 10px;
 }
+
 .search button {
   background-color: #21262d;
   border: none;

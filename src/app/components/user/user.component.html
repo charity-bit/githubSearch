@@ -13,53 +13,62 @@
     <div class="hr"></div>
   </div>
   <div class="search">
+    
     <input
-      type="search" 
+      type="search"
+      #username
       placeholder="Search for a user"
-      [(ngModel)]="username"
+    
     />
-    <button (click)="getUserDetails()">Search</button>
+    <button (click)="getUserDetails(username.value)">Search</button>
   </div>
 
   <!-- results template -->
 
-  <div class="results">
+  <div class="results" *ngIf="userDetails">
     <div class="details">
-      <a [href]= "userDetails.html_url">
+      <a [href]="userDetails.html_url">
         <code class="code">
           <p class="const">
-            const <span>{{userDetails.login}}</span> <span class="equal"> &#61; </span>
+            const <span>{{ userDetails.login }}</span>
+            <span class="equal"> &#61; </span>
             <span>&#123;</span>
           </p>
-          <p class="ttl" *ngIf="userDetails.name">Name: <span class="info">{{userDetails.name}}</span></p>
+          <p class="ttl" *ngIf="userDetails.name">
+            Name: <span class="info">{{ userDetails.name }}</span>
+          </p>
           <p class="ttl" *ngIf="userDetails.bio">
-            Bio: <span class="info">{{userDetails.bio}}</span>
+            Bio: <span class="info">{{ userDetails.bio }}</span>
           </p>
           <p class="ttl" *ngIf="userDetails.location">
-            Location: <span class="info">{{userDetails.location}}</span>
+            Location: <span class="info">{{ userDetails.location }}</span>
           </p>
-          <p class="ttl">Followers: <span class="num">{{userDetails.followers}}</span></p>
-          <p class="ttl">Following: <span class="num">{{userDetails.following}}</span></p>
-          <p class="ttl">Repositories: <span class="num">{{userDetails.public_repos}}</span></p>
+          <p class="ttl">
+            Followers: <span class="num">{{ userDetails.followers }}</span>
+          </p>
+          <p class="ttl">
+            Following: <span class="num">{{ userDetails.following }}</span>
+          </p>
+          <p class="ttl">
+            Repositories:
+            <span class="num">{{ userDetails.public_repos }}</span>
+          </p>
 
           <p class="closing">&#125;</p>
         </code>
       </a>
     </div>
     <div class="img-cont">
-      <img [src]="userDetails.avatar_url" alt="">
-
+      <img [src]="userDetails.avatar_url" alt="" />
     </div>
   </div>
 </div>
 
 <div class="repos">
-
-    <h1>Repos</h1>
-    <div class="repos-cont" *ngFor="let repo of repos">
-      <p>{{repo.name}}</p>
-         
-    </div>
+  <h1>Repos</h1>
+  <div class="repos-cont" *ngFor="let repo of repos">
+    <p>{{ repo.name }}</p>
+  </div>
 </div>
 
 <!-- repos -->

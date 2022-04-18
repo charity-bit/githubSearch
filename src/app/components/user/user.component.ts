@@ -3,41 +3,28 @@ import { GithubService } from '../../services/github.service';
 import { Repo } from '../../Repo';
 import { User } from '../../User';
 
+
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css'],
 })
 export class UserComponent implements OnInit {
-  username!: string;
-  userDetails!: User;
 
+  userDetails!: User;
   repos!: Repo[];
 
-  constructor(private _githubService: GithubService) {}
-
-  ngOnInit(): void {
-    this._githubService.username = 'charity-bit';
-    this._githubService.getUser().subscribe((res: any) => {
-      this.userDetails = res;
-      console.log(this.userDetails);
-    });
+  constructor(private _githubService: GithubService) {
   }
 
-  getUserDetails() {
-    this._githubService.username = this.username;
-    this._githubService.getUser().subscribe((res: any) => {
-      this.userDetails = res;
-      console.log(this.userDetails);
-    });
-
-    this.getRepos();
+  ngOnInit(){
+  
+   
   }
 
-  getRepos() {
-    this._githubService.username = this.username;
-    this._githubService.getRepos().subscribe((res) => {
-      this.repos = res;
-    });
+  getUserDetails(username:string){
+    this._githubService.getUser(username);
+    this.userDetails = this._githubService.user;
+   
   }
 }
