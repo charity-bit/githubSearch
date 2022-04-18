@@ -1,31 +1,18 @@
-<!-- <div>
-    <input type="search" [(ngModel)] = "username">
-    <button (click)="getUserDetails()">Search</button>
-    <button (click)="getRepos()">getRepos</button>
-            
-              
-               
-</div> -->
-
 <div class="main">
   <div class="title">
     <h1>Search For Github Users</h1>
     <div class="hr"></div>
   </div>
   <div class="search">
-    
-    <input
-      type="search"
-      #username
-      placeholder="Search for a user"
-    
-    />
+    <input type="search" #username placeholder="Search for a user" />
     <button (click)="getUserDetails(username.value)">Search</button>
   </div>
 
-  <!-- results template -->
+  <div *ngIf="userDetails; then user"></div>
+</div>
 
-  <div class="results" *ngIf="userDetails">
+<ng-template #user>
+  <div class="results">
     <div class="details">
       <a [href]="userDetails.html_url">
         <code class="code">
@@ -62,13 +49,12 @@
       <img [src]="userDetails.avatar_url" alt="" />
     </div>
   </div>
-</div>
-
-<div class="repos">
-  <h1>Repos</h1>
-  <div class="repos-cont" *ngFor="let repo of repos">
-    <p>{{ repo.name }}</p>
+  <div class="repos">
+    <h1>Repos</h1>
+    <div class="repos-cont" *ngFor="let repo of repos">
+      <p>{{ repo.name }}</p>
+      <p style="color: white;">{{repo.topics | join}}</p>
+    </div>
   </div>
-</div>
+</ng-template>
 
-<!-- repos -->

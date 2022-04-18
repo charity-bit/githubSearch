@@ -74,9 +74,11 @@
   margin: 50px 0;
   width: 90%;
   border-radius: 4px;
- 
   font-weight: 500;
   display: flex;
+}
+.repos{
+  width: 100%;
 }
 .details{
   width: 60%;

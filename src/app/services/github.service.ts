@@ -15,7 +15,9 @@ export class GithubService {
   repoName!: string;
   userRepos!: Repo[];
   repos!:Repo[]
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  
+  }
 
 
 

@@ -12,23 +12,44 @@ import { User } from '../../User';
 export class UserComponent implements OnInit {
 
   userDetails!: User;
+  topics!:string;
   repos!: Repo[];
+  defaultUser!:User;
 
   constructor(private _githubService: GithubService) {
+
+
+  }
+  ngOnInit(){
+     this.getUserDetails('charity-bit')
   }
 
-  ngOnInit(){
-    this.getUserDetails('charity-bit')
-  
-   
-  }
+
 
   getUserDetails(username:string){
-    this._githubService.getUser(username);
-    this.userDetails = this._githubService.user;
+    this._githubService.getUser(username).then(
 
-    this._githubService.getUserRepos(username);
-    this.repos = this._githubService.userRepos;
+      (success)=>{
+        this.userDetails = this._githubService.user;
+        console.log(success)
+      },
+      (error)=>{
+        alert("User not found");
+        console.log(error)
+      }
+    );
+
+    this._githubService.getUserRepos(username).then(
+      ()=>{
+        this.repos = this._githubService.userRepos;
+      },
+      (error)=>{
+        console.log(error)
+      }
+    )
    
   }
+
+
+
 }
