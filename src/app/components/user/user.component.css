@@ -1,3 +1,29 @@
+.s-parent {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-left: auto;
+}
+.search-repo {
+  padding: 20px 20px;
+  font-size: 1.2rem;
+  display: flex;
+  color: #fff;
+  gap: 10px;
+  transition: background-color 1s ease-in-out;
+}
+.search-repo a {
+  color:#fff;
+  text-decoration: none;
+}
+.search-repo:hover {
+  background-color: #2f4f4f;
+}
+.hr {
+  background-color: #2f4f4f;
+  height: 2px;
+}
+
 .main {
   /* background-color: #222; */
   width: 100%;
@@ -67,7 +93,6 @@
 
 .results {
   background-color: #161b22;
-
   color: #fff;
   margin: 50px 0;
   width: 60%;
@@ -77,7 +102,6 @@
 }
 .repos {
   width: 100%;
-  
 }
 .details {
   width: 60%;
@@ -131,14 +155,12 @@
 }
 
 /* repos */
-.repos{
+.repos {
   display: flex;
   flex-wrap: wrap;
 }
 .repos-cont {
   width: 30%;
-  
-  
 }
 .i-repo {
   display: flex;
@@ -150,43 +172,96 @@
   display: flex;
   gap: 5%;
 }
-.lang,.s-z {
-  color:#628fdb;
-
+.lang,
+.s-z {
+  color: #628fdb;
 }
-.s-z span,.lang span{
+.s-z span,
+.lang span {
   color: whitesmoke;
-  opacity: .9;
+  opacity: 0.9;
 }
 
-.desc{
-color: whitesmoke;
-text-align: left;
-opacity: .9;
+.desc {
+  color: whitesmoke;
+  text-align: left;
+  opacity: 0.9;
 }
-.nm{
-  
+.nm {
   font-size: 1.6rem;
   color: whitesmoke;
-
 }
 
-.stars{
+.stars {
   display: flex;
   gap: 20px;
   color: whitesmoke;
-  opacity: .9;
-
+  opacity: 0.9;
 }
-.str-2 fa-icon{ 
-  color:#e1a249;
+.str-2 fa-icon {
+  color: #e1a249;
 }
-.str-3 fa-icon{
+.str-3 fa-icon {
   color: #38bcad;
-
 }
-.topics{
+.topics {
   color: whitesmoke;
-  opacity:.4;
+  opacity: 0.4;
 }
 
+@media screen and (max-width: 900px) {
+ 
+  .results {
+    width: 70%;
+    margin: 40px 0;
+  }
+  .repos-cont {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .s-parent{
+    width: 50%;
+  }
+  
+}
+
+@media screen and (max-width: 520px) {
+  .s-parent{
+    width: 60%;
+  }
+  .results {
+    width: 80%;
+    margin: 40px auto;
+  }
+  .repos-cont {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .s-parent{
+    width: 80%;
+  }
+  .results {
+    flex-direction: column-reverse;
+  }
+
+  .details {
+    width: 100%;
+  }
+  .img-cont {
+    width: 100%;
+  }
+
+  .sz {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .details {
+    width: 100%;
+    padding: 5%;
+    margin: 2%;
+  }
+}

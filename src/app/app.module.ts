@@ -11,7 +11,8 @@ import { UserComponent } from './components/user/user.component';
 import { ReposComponent } from './components/repos/repos.component';
 import { NoUserComponent } from './components/no-user/no-user.component';
 import { JoinPipe } from './pipes/join.pipe';
-import { SubstringPipe } from './pipes/substring.pipe';
+import { RouterModule } from '@angular/router';
+
 
  
 
@@ -22,13 +23,19 @@ import { SubstringPipe } from './pipes/substring.pipe';
     ReposComponent,
     NoUserComponent,
     JoinPipe,
-    SubstringPipe,
+   
 
  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule.forRoot([
+     {path:'user',component: UserComponent},
+     {path: 'repoes',component: ReposComponent},
+     {path:'',redirectTo:'/user',pathMatch:'full'},
+     {path:'**',component:NoUserComponent}
+    ]),
     FormsModule,
     HttpClientModule,
     FontAwesomeModule

@@ -1,3 +1,17 @@
+<div class="s-parent">
+  <div class="search-repo">
+    <fa-icon [icon]="faSearch">
+
+    </fa-icon>
+    <a routerLink="/repoes">Seach for repos</a>
+  </div>
+ <div class="hr">
+
+ </div>
+
+  
+</div>
+
 <div class="main">
   <div class="title">
     <h1>Search For Github Users</h1>
@@ -80,7 +94,7 @@
               Size: <span> {{ repo.size }}</span>
             </p>
           </div>
-          <p class="desc" *ngIf="repo.description">{{ repo.description | substring }}</p>
+          <p class="desc" *ngIf="repo.description">{{ repo.description }}</p>
           <div class="stars">
             <div class="str-1" *ngIf="repo.watcher_count">
               <fa-icon [icon]="faEye"></fa-icon>
