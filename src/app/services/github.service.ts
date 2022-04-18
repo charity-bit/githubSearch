@@ -55,7 +55,7 @@ export class GithubService {
   getUserRepos(userName: string) {
     const promise = new Promise<void>((resolve, reject) => {
       this.http
-        .get<Repo[]>(`${environment.base_url}/${userName}/repos`,{headers:{
+        .get<Repo[]>(`${environment.base_url}/${userName}/repos&`,{headers:{
           Authorization: `token ${environment.access_token}`
         }})
         .subscribe({
