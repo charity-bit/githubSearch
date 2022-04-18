@@ -18,6 +18,7 @@ export class UserComponent implements OnInit {
   }
 
   ngOnInit(){
+    this.getUserDetails('charity-bit')
   
    
   }
@@ -25,6 +26,9 @@ export class UserComponent implements OnInit {
   getUserDetails(username:string){
     this._githubService.getUser(username);
     this.userDetails = this._githubService.user;
+
+    this._githubService.getUserRepos(username);
+    this.repos = this._githubService.userRepos;
    
   }
 }
