@@ -4,88 +4,107 @@
     <div class="hr"></div>
   </div>
   <div class="search">
-    <input type="search" 
-     (keyup.enter)="getUserDetails(username.value)" 
-
-     #username placeholder="Search for a user" />
+    <input
+      type="search"
+      (keyup.enter)="getUserDetails(username.value)"
+      #username
+      placeholder="Search for a user"
+    />
     <button (click)="getUserDetails(username.value)">Search</button>
   </div>
 
-  <div *ngIf="userDetails; then user"></div>
+  <div>
+    <div *ngIf="userDetails; then results"></div>
+    <div *ngIf="userDetails; then  urepo">
+      
+    </div>
+  </div>
 </div>
 
-<ng-template #user>
-  <div class="results">
-    <div class="details">
-      <a [href]="userDetails.html_url">
-        <code class="code">
-          <p class="const">
-            const <span>{{ userDetails.login }}</span>
-            <span class="equal"> &#61; </span>
-            <span>&#123;</span>
-          </p>
-          <p class="ttl" *ngIf="userDetails.name">
-            Name: <span class="info">{{ userDetails.name }}</span>
-          </p>
-          <p class="ttl" *ngIf="userDetails.bio">
-            Bio: <span class="info">{{ userDetails.bio }}</span>
-          </p>
-          <p class="ttl" *ngIf="userDetails.location">
-            Location: <span class="info">{{ userDetails.location }}</span>
-          </p>
-          <p class="ttl">
-            Followers: <span class="num">{{ userDetails.followers }}</span>
-          </p>
-          <p class="ttl">
-            Following: <span class="num">{{ userDetails.following }}</span>
-          </p>
-          <p class="ttl">
-            Repositories:
-            <span class="num">{{ userDetails.public_repos }}</span>
-          </p>
 
-          <p class="closing">&#125;</p>
-        </code>
-      </a>
-    </div>
-    <div class="img-cont">
-      <img [src]="userDetails.avatar_url" alt="" />
-    </div>
-  </div>
-  <div class="repos">
-    <div class="repos-cont" *ngFor="let repo of repos">
-      <div class="i-repo">
-        
-        <p *ngIf="repo.name" class="nm">{{ repo.name }}</p>
 
-        <div class="sz">
-          <p *ngIf="repo.language" class="lang">
-            Language: <span>{{ repo.language }}</span>
-          </p>
-          <p  class="s-z"
-          *ngIf="repo.size">Size: <span> {{ repo.size }}</span></p>
-        </div>
-        <p class="desc"
-        *ngIf="repo.description">{{ repo.description }}</p>
-        <div class="stars">
-          <div class="str-1"
-           *ngIf="repo.watcher_count">
-            <fa-icon [icon]="faEye"></fa-icon>
-            {{ repo.watcher_count }}
-          </div>
 
-          <div class="str-2" *ngIf="repo.stargazers_count">
-            <fa-icon [icon]="faStar"></fa-icon>
-            {{ repo.stargazers_count }}
-          </div>
-          <div class="str-3" *ngIf="repo.stargazers_count">
-            <fa-icon [icon]="faCode"> </fa-icon>
-            {{ repo.forks_count }}
-          </div>
-        </div>
-        <p *ngIf="repo.topics" class="topics"
-         style="color: white">{{ repo.topics | join }}</p>
+<ng-container #user>
+  <ng-template #results>
+    <div class="results" >
+      <div class="details">
+        <a [href]="userDetails.html_url">
+          <code class="code">
+            <p class="const">
+              const <span>{{ userDetails.login }}</span>
+              <span class="equal"> &#61; </span>
+              <span>&#123;</span>
+            </p>
+            <p class="ttl" *ngIf="userDetails.name">
+              Name: <span class="info">{{ userDetails.name }}</span>
+            </p>
+            <p class="ttl" *ngIf="userDetails.bio">
+              Bio: <span class="info">{{ userDetails.bio }}</span>
+            </p>
+            <p class="ttl" *ngIf="userDetails.location">
+              Location: <span class="info">{{ userDetails.location }}</span>
+            </p>
+            <p class="ttl">
+              Followers: <span class="num">{{ userDetails.followers }}</span>
+            </p>
+            <p class="ttl">
+              Following: <span class="num">{{ userDetails.following }}</span>
+            </p>
+            <p class="ttl">
+              Repositories:
+              <span class="num">{{ userDetails.public_repos }}</span>
+            </p>
+  
+            <p class="closing">&#125;</p>
+          </code>
+        </a>
+      </div>
+      <div class="img-cont">
+        <img [src]="userDetails.avatar_url" alt="" />
       </div>
     </div>
-  </div>
-</ng-template>
+
+  </ng-template>
+ 
+  <ng-template #urepo>
+    <div class="repos">
+      <div class="repos-cont" *ngFor="let repo of repos">
+        <div class="i-repo">
+          <p *ngIf="repo.name" class="nm">{{ repo.name }}</p>
+  
+          <div class="sz">
+            <p *ngIf="repo.language" class="lang">
+              Language: <span>{{ repo.language }}</span>
+            </p>
+            <p class="s-z" *ngIf="repo.size">
+              Size: <span> {{ repo.size }}</span>
+            </p>
+          </div>
+          <p class="desc" *ngIf="repo.description">{{ repo.description | substring }}</p>
+          <div class="stars">
+            <div class="str-1" *ngIf="repo.watcher_count">
+              <fa-icon [icon]="faEye"></fa-icon>
+              {{ repo.watcher_count }}
+            </div>
+  
+            <div class="str-2" *ngIf="repo.stargazers_count">
+              <fa-icon [icon]="faStar"></fa-icon>
+              {{ repo.stargazers_count }}
+            </div>
+            <div class="str-3" *ngIf="repo.stargazers_count">
+              <fa-icon [icon]="faCode"> </fa-icon>
+              {{ repo.forks_count }}
+            </div>
+          </div>
+          <p *ngIf="repo.topics" class="topics" style="color: white">
+            {{ repo.topics | join }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  
+
+</ng-container>
+
+ 

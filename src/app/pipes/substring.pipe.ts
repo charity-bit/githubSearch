@@ -1,12 +1,19 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
+
 @Pipe({
   name: 'substring'
 })
 export class SubstringPipe implements PipeTransform {
+  substr!:string;
+  transform(value:string): unknown {
+    
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+    if(value.length > 20){
+      this.substr = `${value.slice(0,200)}...`
+
+    }
+    return this.substr;
   }
 
 }
