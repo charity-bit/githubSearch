@@ -11,6 +11,7 @@ import { UserComponent } from './components/user/user.component';
 import { ReposComponent } from './components/repos/repos.component';
 import { NoUserComponent } from './components/no-user/no-user.component';
 import { JoinPipe } from './pipes/join.pipe';
+import { SubstringPipe } from './pipes/substring.pipe';
 
  
 
@@ -21,6 +22,7 @@ import { JoinPipe } from './pipes/join.pipe';
     ReposComponent,
     NoUserComponent,
     JoinPipe,
+    SubstringPipe,
 
  
   ],

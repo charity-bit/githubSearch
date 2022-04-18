@@ -7,5 +7,7 @@ export interface Repo{
     watcher_count:number;
     topics:[];
     language:string;
+    size:number;
+
 
 }

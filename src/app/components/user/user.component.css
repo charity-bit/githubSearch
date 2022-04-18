@@ -8,20 +8,19 @@
   padding-top: 4%;
   padding-right: 3%;
   padding-left: 3%;
-
 }
 
-.repos{
+.repos {
   width: 70%;
-  margin:0 auto;
+  margin: 0 auto;
 }
-.repos h1{
+.repos h1 {
   font-size: 1.2rem;
   color: #fff;
   margin-left: 10px;
   font-weight: 400;
 }
-.repos-cont{
+.repos-cont {
   width: 100%;
   margin: 10px auto;
   border: 1px solid #2f4f4f;
@@ -30,7 +29,6 @@
   padding-top: 4%;
   padding-right: 3%;
   padding-left: 3%;
-
 }
 .title h1 {
   font-family: "Montserrat", sans-serif;
@@ -77,22 +75,21 @@
   font-weight: 500;
   display: flex;
 }
-.repos{
+.repos {
   width: 100%;
 }
-.details{
+.details {
   width: 60%;
   padding: 5%;
 }
-.details a{
+.details a {
   text-decoration: none;
 }
-.img-cont{
-  width:40%;
+.img-cont {
+  width: 40%;
   padding: 0;
- 
 }
-.img-cont img{
+.img-cont img {
   width: 100%;
   height: 100%;
 }
@@ -106,11 +103,9 @@
 }
 .const .equal {
   color: #0078d7;
-  
 }
 .info {
   color: #e1a249;
- 
 }
 .const {
   color: #a53222;
@@ -121,18 +116,76 @@
 .closing {
   color: #d3d3d3;
   margin-top: 20px;
-
 }
 .num {
   color: #38bcad;
+}
+.code p:nth-child(2) {
+  margin-top: 20px;
+}
+.code {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* repos */
+.repos{
+  display: flex;
+  flex-wrap: wrap;
+}
+.repos-cont {
+  width: 45%;
+  
+  
+}
+.i-repo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 1.1rem;
+}
+.sz {
+  display: flex;
+  gap: 5%;
+}
+.lang,.s-z {
+  color:#628fdb;
 
 }
-.code p:nth-child(2){
-    margin-top: 20px;
+.s-z span,.lang span{
+  color: whitesmoke;
+  opacity: .9;
 }
-.code{
-    display: flex;
-    flex-direction: column;
-    gap:5px;
+
+.desc{
+color: whitesmoke;
+text-align: left;
+opacity: .9;
+}
+.nm{
+  
+  font-size: 1.6rem;
+  color: whitesmoke;
+
+}
+
+.stars{
+  display: flex;
+  gap: 20px;
+  color: whitesmoke;
+  opacity: .9;
+
+}
+.str-2 fa-icon{ 
+  color:#e1a249;
+}
+.str-3 fa-icon{
+  color: #38bcad;
+
+}
+.topics{
+  color: whitesmoke;
+  opacity:.4;
 }
 

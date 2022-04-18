@@ -6,9 +6,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class JoinPipe implements PipeTransform {
 
   transform(value:[]): unknown {
-
-
-    return value.join(" ");
+   
+              
+    return value.join("\t\t\t#");
   }
 
 }

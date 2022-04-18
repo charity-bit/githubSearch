@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GithubService } from '../../services/github.service';
+import {faStar,faCode,faEye} from '@fortawesome/free-solid-svg-icons';
 import { Repo } from '../../Repo';
 import { User } from '../../User';
 
@@ -11,17 +12,23 @@ import { User } from '../../User';
 })
 export class UserComponent implements OnInit {
 
+
   userDetails!: User;
   topics!:string;
   repos!: Repo[];
   defaultUser!:User;
+
+  // icons
+  faEye = faEye;
+  faStar = faStar;
+  faCode = faCode;
 
   constructor(private _githubService: GithubService) {
 
 
   }
   ngOnInit(){
-     this.getUserDetails('charity-bit')
+     this.getUserDetails('j')
   }
 
 
