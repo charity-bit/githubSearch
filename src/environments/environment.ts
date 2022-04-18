@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   base_url: "https://api.github.com/users",
   base_repo_url:"https://api.github.com/search/repositories?q=",
-  access_token:"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"
+  access_token:"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"
 };
 
 /*
