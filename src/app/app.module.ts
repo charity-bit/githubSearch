@@ -13,6 +13,7 @@ import { NoUserComponent } from './components/no-user/no-user.component';
 import { JoinPipe } from './pipes/join.pipe';
 import { RouterModule } from '@angular/router';
 import { TruncatePipe } from './pipes/truncate.pipe';
+import { NavComponent } from './components/nav/nav.component';
 
 
  
@@ -25,6 +26,7 @@ import { TruncatePipe } from './pipes/truncate.pipe';
     NoUserComponent,
     JoinPipe,
     TruncatePipe,
+    NavComponent,
    
 
  

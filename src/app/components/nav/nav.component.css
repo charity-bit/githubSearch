@@ -1,0 +1,25 @@
+nav{
+    padding: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap:20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #2f4f4f;
+    font-size: 1.2rem;
+    text-align: right;
+    font-weight: bold;
+}
+
+@media screen and (max-width:350px) {
+
+    nav ul li a {
+        font-size: 1rem;
+        }
+    
+}

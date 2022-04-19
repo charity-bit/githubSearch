@@ -1,10 +1,25 @@
+.nav-items{
+  display: flex;
+  width: 100vw;
+  padding-left: 3%;
+  justify-content: space-between;
+  align-items: center;
+   
+}
+.nav-items fa-icon{
+  color:#2f4f4f;
+  font-size: 2rem;
+}
+.nav-items app-nav{
+  width: 100%;
+}
+
 .main {
     /* background-color: #222; */
     width: 100%;
     margin: 40px auto;
     border-radius: 5px;
     padding-bottom: 2%;
-    padding-top: 4%;
     padding-right: 3%;
     padding-left: 3%;
   }
@@ -243,6 +258,11 @@
     padding: 5%;
     margin: 2%;
   }
+
+  .nav-items fa-icon{
+    font-size: 1.5rem;
+  }
+  
 }
 
   

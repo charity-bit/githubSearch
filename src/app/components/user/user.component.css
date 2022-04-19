@@ -1,3 +1,18 @@
+
+.nav-items{
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.nav-items app-nav{
+  width: 50%;
+}
+
+.nav-items:hover{
+
+}
 .s-parent {
   display: flex;
   flex-direction: column;
@@ -5,8 +20,8 @@
   margin-left: auto;
 }
 .search-repo {
-  padding: 20px 20px;
   font-size: 1.2rem;
+  padding: 0 20px;
   display: flex;
   color: #fff;
   gap: 10px;
@@ -16,12 +31,11 @@
   color:#fff;
   text-decoration: none;
 }
-.search-repo:hover {
-  background-color: #2f4f4f;
-}
+
 .hr {
   background-color: #2f4f4f;
   height: 2px;
+  width: 100%;
 }
 
 .rl{
@@ -37,7 +51,6 @@
   margin: 40px auto;
   border-radius: 5px;
   padding-bottom: 2%;
-  padding-top: 4%;
   padding-right: 3%;
   padding-left: 3%;
 }
@@ -220,6 +233,7 @@
   font-size: 1.2rem;
 }
 
+
 @media screen and (max-width: 900px) {
  
   .results {
@@ -239,8 +253,16 @@
 }
 
 @media screen and (max-width: 520px) {
+  
+  .nav-items {
+    flex-direction: column;
+  }
+  .nav-items app-nav{
+    width:100%
+  }
   .s-parent{
-    width: 60%;
+    width: 100%;
+    margin-top: 10px;
   }
   .results {
     width: 80%;
