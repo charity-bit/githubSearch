@@ -28,7 +28,6 @@ By Charity Nyanchera
 <p> This is an Angular application that consumes githubSearch API to optimize searching for any github user, their repositories or just any repositorythat is in github.
 </p>
 
-<hr>
 
 ### Requirements
 
@@ -73,7 +72,7 @@ Click on the link below to view the live site
 
 ## Licence
 <hr>
-  <a href=https://github.com/charity-bit/githubSearch/blob/main/LICENSE"">MIT LICENSE</a>
+  <a href=https://github.com/charity-bit/githubSearch/blob/main/LICENSE">MIT LICENSE</a>
 
 <br>
 <br>
