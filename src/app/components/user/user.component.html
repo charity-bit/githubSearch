@@ -41,12 +41,17 @@
   </div>
 
   <div>
+    <p class="rl" *ngIf="username.value"
+>Search results for {{username.value}} ...</p>
+
+
     <div *ngIf="userDetails; then results"></div>
     <div *ngIf="userDetails; then  urepo">
       
     </div>
   </div>
 </div>
+
 
 
 
@@ -120,7 +125,7 @@
               Size: <span> {{ repo.size }}</span>
             </p>
           </div>
-          <p class="desc" *ngIf="repo.description">{{ repo.description }}</p>
+          <p class="desc" *ngIf="repo.description">{{ repo.description | truncate}}</p>
           <div class="stars">
             <div class="str-1" *ngIf="repo.watcher_count">
               <fa-icon [icon]="faEye"></fa-icon>

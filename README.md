@@ -1,27 +1,92 @@
 # GithubSearch
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+This is an Angular application that consumes githubSearch API to optimize searching for any github user, their repositories or just any repositorythat is in github.
 
-## Development server
+<img src='./src/assets/user.png'>
+<img src='./src/assets/user_repos.png'>
+<img src='./src/assets/repos.png'>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+By Charity Nyanchera
+<p>Click to view <a href="">live Demo</a></p>
 
-## Code scaffolding
+<hr>
+<br>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Table of Content
 
-## Build
+- [Description](#description)
+- [Installation Requirement](#Installation)
+- [Technology Used](#technology-used)
+- [Reference](#reference)
+- [Licence](#licence)
+- [Authors Info](#author-Info)
+- [ToDO](#To-Do)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Description
+<hr>
+<p> This is an Angular application that consumes githubSearch API to optimize searching for any github user, their repositories or just any repositorythat is in github.
+</p>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<hr>
 
-## Running end-to-end tests
+### Requirements
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Devices such as tablet , phones , laptops and desktop computers.
 
-## Further help
+- Access to the internet.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Installation Process
+
+---
+
+Click on the link below to view the live site
+
+<a href="">live site<a>
+
+
+
+---
+<p>git clone - to clone this repo</p>
+
+## Technology Used
+<hr>
+
+- ANGULAR
+
+- CSS
+
+- JAVASCRIPT
+
+- TYPESCRIPT.
+
+
+## Reference
+<hr>
+
+- <p><a href="https://developer.mozilla.org/en-US/"> MDN Web Docs</a>
+
+- <p><a href="https://angular.io/">Angular official documentation</a></p>
+
+
+<br>
+
+## Licence
+<hr>
+MIT License
+
+<br>
+<br>
+
+ 
+
+ [Go Back to the top](#githubSearch)
+
+## Authors Info
+<hr>
+
+LinkedIn - [Charity Nyanchera](https://www.linkedin.com/in/charity-nyanchera-2679281a2/)
+
+twitter - [Twitter](https://twitter.com/CcNyanchera)
+
+[Go Back to the top](#githubSearch)

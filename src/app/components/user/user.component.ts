@@ -31,7 +31,7 @@ export class UserComponent implements OnInit {
 
   }
   ngOnInit(){
-     this.getUserDetails('j')
+     this.getUserDetails('charity-bit')
   }
 
 
