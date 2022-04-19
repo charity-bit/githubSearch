@@ -113,12 +113,42 @@
 
 .results {
   background-color: #161b22;
+  position: relative;
   color: #fff;
   margin: 50px 0;
   width: 60%;
   border-radius: 4px;
   font-weight: 500;
   display: flex;
+}
+.link-p{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity:0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* TO FIX */
+/* USAGE USING DIRECTIVE */
+.link-p:hover{
+  opacity: 0.9;
+
+}
+.link-p .link{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+.link-p a fa-icon{
+  color:#2f4f4f;
+  font-size: 2rem;
+
 }
 .repos {
   width: 100%;
@@ -232,6 +262,7 @@
   margin-right:10px;
   font-size: 1.2rem;
 }
+
 
 
 @media screen and (max-width: 900px) {

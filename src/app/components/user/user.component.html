@@ -53,7 +53,13 @@
 
 <ng-container #user>
   <ng-template #results>
-    <div class="results" >
+    <div class="results">
+      <div class="link-p" appHover>
+        <a class="link"
+        [href]="userDetails.html_url" *ngIf="userDetails.html_url">
+          <fa-icon [icon]="faLink"></fa-icon></a>  
+
+      </div>
       <div class="details">
         <a [href]="userDetails.html_url">
           <code class="code">

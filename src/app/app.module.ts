@@ -14,6 +14,7 @@ import { JoinPipe } from './pipes/join.pipe';
 import { RouterModule } from '@angular/router';
 import { TruncatePipe } from './pipes/truncate.pipe';
 import { NavComponent } from './components/nav/nav.component';
+import { HoverDirective } from './directives/hover.directive';
 
 
  
@@ -27,6 +28,7 @@ import { NavComponent } from './components/nav/nav.component';
     JoinPipe,
     TruncatePipe,
     NavComponent,
+    HoverDirective,
    
 
  
