@@ -7,7 +7,7 @@ This is an Angular application that consumes githubSearch API to optimize search
 <img src='./src/assets/repos.png'>
 
 By Charity Nyanchera
-<p>Click to view <a href="https://search-git-hub.netlify.app/user">live Demo</a></p>
+<p>Click to view <a href="https://search-git-hub.netlify.app/">live Demo</a></p>
 
 <hr>
 <br>
@@ -42,7 +42,7 @@ By Charity Nyanchera
 
 Click on the link below to view the live site
 
-<a href="https://search-git-hub.netlify.app/user">live site<a>
+<a href="https://search-git-hub.netlify.app/">live site<a>
 
 
 
