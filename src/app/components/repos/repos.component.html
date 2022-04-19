@@ -1,17 +1,61 @@
 
+
+
+
 <div class="main">
     <div class="title">
-      <h1>Search For Github Users</h1>
+      <h1>Search For any Repo in Github</h1>
       <div class="hr"></div>
     </div>
     <div class="search">
       <input
         type="search"
+        (keyup.enter)="getRepos(repo.value)"
         #repo
         placeholder="Search for a user"
       />
-      <button>Search</button>
+      <button  (click)="getRepos(repo.value)">Search</button>
     </div>
   
   </div>
+
+ 
+
+
+    <div class="repos">
+      <div class="repos-cont" *ngFor="let repo of repos">
+        <div class="i-repo">
+          <p *ngIf="repo.name" class="nm">{{ repo.name }}</p>
+  
+          <div class="sz">
+            <p *ngIf="repo.language" class="lang">
+              Language: <span>{{ repo.language }}</span>
+            </p>
+            <p class="s-z" *ngIf="repo.size">
+              Size: <span> {{ repo.size }}</span>
+            </p>
+          </div>
+          <p class="desc" *ngIf="repo.description">{{ repo.description  | truncate}}</p>
+          <div class="stars">
+            <div class="str-1" *ngIf="repo.watcher_count">
+              <fa-icon [icon]="faEye"></fa-icon>
+              {{ repo.watcher_count }}
+            </div>
+  
+            <div class="str-2" *ngIf="repo.stargazers_count">
+              <fa-icon [icon]="faStar"></fa-icon>
+              {{ repo.stargazers_count }}
+            </div>
+            <div class="str-3" *ngIf="repo.stargazers_count">
+              <fa-icon [icon]="faCode"> </fa-icon>
+              {{ repo.forks_count }}
+            </div>
+          </div>
+          <p *ngIf="repo.topics" class="topics" style="color: white">
+            {{ repo.topics | join }}
+          </p>
+        </div>
+      </div>
+    </div>
+
   

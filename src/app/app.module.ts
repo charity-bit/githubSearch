@@ -12,6 +12,7 @@ import { ReposComponent } from './components/repos/repos.component';
 import { NoUserComponent } from './components/no-user/no-user.component';
 import { JoinPipe } from './pipes/join.pipe';
 import { RouterModule } from '@angular/router';
+import { TruncatePipe } from './pipes/truncate.pipe';
 
 
  
@@ -23,6 +24,7 @@ import { RouterModule } from '@angular/router';
     ReposComponent,
     NoUserComponent,
     JoinPipe,
+    TruncatePipe,
    
 
  

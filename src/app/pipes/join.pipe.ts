@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class JoinPipe implements PipeTransform {
 
-  transform(value:[]): unknown {
+  transform(value:[]): string {
    
               
     return value.join("\t\t\t#");
