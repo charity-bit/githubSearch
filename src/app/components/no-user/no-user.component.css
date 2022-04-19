@@ -24,3 +24,11 @@ p:nth-child(3){
     font-weight: 700;
     margin-top: 20px;
 }
+
+
+@media screen and (max-width:500px) {
+    img{
+        height:200px
+    }
+    
+}

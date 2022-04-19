@@ -81,12 +81,16 @@
   </ng-template>
  
   <ng-template #urepo>
+    <p class="rl">Repositories</p>
+   
     <div class="repos">
       <div class="repos-cont" *ngFor="let repo of repos">
         <div class="i-repo">
+          <a [href]="repo.html_url"><fa-icon [icon]="faLink"></fa-icon></a>
+          
+
           <p *ngIf="repo.name" class="nm">  
              <fa-icon [icon]="faFolder"></fa-icon>
-            
             {{ repo.name }}</p>
   
           <div class="sz">

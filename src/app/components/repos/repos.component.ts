@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {faStar,faCode,faEye,faSearch,faFolder} from '@fortawesome/free-solid-svg-icons';
+import {faStar,faCode,faEye,faLink,faFolder} from '@fortawesome/free-solid-svg-icons';
 import { GithubService } from 'src/app/services/github.service';
 import { Repo } from '../../Repo';
 
@@ -18,6 +18,7 @@ export class ReposComponent implements OnInit {
   faStar = faStar;
   faCode = faCode;
   faFolder = faFolder;
+  faLink = faLink;
 
   constructor(private _githubService:GithubService) { }
 

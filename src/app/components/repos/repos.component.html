@@ -4,7 +4,7 @@
 
 </div>
 
-<div class="main">
+   <div class="main">
     <div class="title">
       <h1>Search For any Repo in Github</h1>
       <div class="hr"></div>
@@ -23,10 +23,14 @@
 
  
 
-
+  <p class="rl"
+  *ngIf="repo.value">Search results for {{repo.value}} ...</p>
+     
     <div class="repos">
       <div class="repos-cont" *ngFor="let repo of repos">
         <div class="i-repo">
+          <a [href]="repo.html_url"><fa-icon [icon]="faLink"></fa-icon></a>
+        
           <p *ngIf="repo.name" class="nm">
               <fa-icon [icon]="faFolder"></fa-icon>
               {{ repo.name }}</p>
