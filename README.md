@@ -73,7 +73,7 @@ Click on the link below to view the live site
 
 ## Licence
 <hr>
-MIT License
+  <a href=https://github.com/charity-bit/githubSearch/blob/main/LICENSE"">MIT LICENSE</a>
 
 <br>
 <br>
