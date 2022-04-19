@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GithubService } from '../../services/github.service';
-import {faStar,faCode,faEye,faSearch} from '@fortawesome/free-solid-svg-icons';
+import {faStar,faCode,faEye,faSearch,faFolder} from '@fortawesome/free-solid-svg-icons';
 import { Repo } from '../../Repo';
 import { User } from '../../User';
 
@@ -23,6 +23,7 @@ export class UserComponent implements OnInit {
   faStar = faStar;
   faCode = faCode;
   faSearch = faSearch;
+  faFolder = faFolder;
 
   constructor(private _githubService: GithubService) {
 

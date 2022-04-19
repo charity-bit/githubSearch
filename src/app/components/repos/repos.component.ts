@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {faStar,faCode,faEye,faSearch} from '@fortawesome/free-solid-svg-icons';
+import {faStar,faCode,faEye,faSearch,faFolder} from '@fortawesome/free-solid-svg-icons';
 import { GithubService } from 'src/app/services/github.service';
 import { Repo } from '../../Repo';
 
@@ -17,11 +17,12 @@ export class ReposComponent implements OnInit {
   faEye = faEye;
   faStar = faStar;
   faCode = faCode;
-  faSearch = faSearch;
+  faFolder = faFolder;
 
   constructor(private _githubService:GithubService) { }
 
   ngOnInit(): void {
+    this.getRepos("fight")
   }
 
 

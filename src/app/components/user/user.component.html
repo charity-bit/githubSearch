@@ -84,7 +84,10 @@
     <div class="repos">
       <div class="repos-cont" *ngFor="let repo of repos">
         <div class="i-repo">
-          <p *ngIf="repo.name" class="nm">{{ repo.name }}</p>
+          <p *ngIf="repo.name" class="nm">  
+             <fa-icon [icon]="faFolder"></fa-icon>
+            
+            {{ repo.name }}</p>
   
           <div class="sz">
             <p *ngIf="repo.language" class="lang">

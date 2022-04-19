@@ -208,6 +208,10 @@
   color: whitesmoke;
   opacity: 0.4;
 }
+.nm fa-icon{
+  margin-right:10px;
+  font-size: 1.2rem;
+}
 
 @media screen and (max-width: 900px) {
  
