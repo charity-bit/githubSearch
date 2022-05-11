@@ -3,8 +3,6 @@
 This is an Angular application that consumes githubSearch API to optimize searching for any github user, their repositories or just any repositorythat is in github.
 
 <img src='./src/assets/user.png'>
-<img src='./src/assets/user_repos.png'>
-<img src='./src/assets/repos.png'>
 
 By Charity Nyanchera
 <p>Click to view <a href="https://search-git-hub.netlify.app/">live Demo</a></p>
